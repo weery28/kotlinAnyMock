@@ -2,16 +2,16 @@
 Mockito.any() for using in Kotlin 
 [![](https://jitpack.io/v/weery28/kotlinAnyMock.svg)](https://jitpack.io/#weery28/kotlinAnyMock)
 
-allprojects {
+`allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
-	}
+	}`
   
-  dependencies {
+ ` dependencies {
 	        implementation 'com.github.weery28:kotlinAnyMock:0.0.1'
-	}
+	}`
   
 
 1. Provide mathcer (Mockito.any(clas)) with KotlinAnyMock.setupMockitoAny.
