@@ -8,32 +8,32 @@ import org.junit.Test
 import org.mockito.Mockito
 
 
-class Test{
+class Test {
 
 
 	@Before
-	fun before(){
+	fun before() {
 
 		KotlinAnyMock.setupMockitoAny { Mockito.any(it) }
 	}
 
 	@Test
-	fun test(){
+	fun test() {
 
 		class A
 
-		class B (a : A)
+		class B(a: A)
 
-		class C (i : Int , b : B)
+		class C(i: Int, b: B)
 
-		class D (s : Set<A>, m : Map<B,C>)
+		class D(s: Set<A>, m: Map<B, C>)
 
-		class E (a : A, d : D, s : String, f : Float)
+		class E(a: A, d: D, s: String, f: Float)
 
 
 		open class Service {
 
-			open fun check(e : E) : Boolean{
+			open fun check(e: E): Boolean {
 				requireNotNull(e)
 				return true
 			}
@@ -50,7 +50,7 @@ class Test{
 	}
 
 	@Test
-	fun checkNotNull(){
+	fun checkNotNull() {
 		Assert.assertNotNull(kotlinAny<Pair<Int, String>>(false))
 	}
 
